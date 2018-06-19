@@ -35,38 +35,38 @@ describe('blinkyDancer', function() {
 });
 
 
-describe('kathakDancer', function() {
+describe('saturnDancer', function() {
 
-  var kathakDancer, clock;
+  var saturnDancer, clock;
   var timeBetweenSteps = 100;
 
   beforeEach(function() {
     clock = sinon.useFakeTimers();
-    kathakDancer = new makeBlinkyDancer(10, 20, timeBetweenSteps);
+    saturnDancer = new makeBlinkyDancer(10, 20, timeBetweenSteps);
   });
 
   it('should have a jQuery $node object', function() {
-    expect(kathakDancer.$node).to.be.an.instanceof(jQuery);
+    expect(saturnDancer.$node).to.be.an.instanceof(jQuery);
   });
 
   it('should have a step function that makes its node blink', function() {
-    sinon.spy(kathakDancer.$node, 'toggle');
-    kathakDancer.step();
-    expect(kathakDancer.$node.toggle.called).to.be.true;
+    sinon.spy(saturnDancer.$node, 'toggle');
+    saturnDancer.step();
+    expect(saturnDancer.$node.toggle.called).to.be.true;
   });
 
   describe('dance', function() {
     it('should call step at least once per second', function() {
-      sinon.spy(kathakDancer, 'step');
-      expect(kathakDancer.step.callCount).to.be.equal(0);
+      sinon.spy(saturnDancer, 'step');
+      expect(saturnDancer.step.callCount).to.be.equal(0);
       clock.tick(timeBetweenSteps); // ? it seems an extra tick is necessary...
       clock.tick(timeBetweenSteps);
      
 
-      expect(kathakDancer.step.callCount).to.be.equal(1);
+      expect(saturnDancer.step.callCount).to.be.equal(1);
 
       clock.tick(timeBetweenSteps);
-      expect(kathakDancer.step.callCount).to.be.equal(2);
+      expect(saturnDancer.step.callCount).to.be.equal(2);
     });
   });
 });

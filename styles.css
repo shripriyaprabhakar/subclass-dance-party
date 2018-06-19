@@ -20,8 +20,55 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
-.dancer{
+/*.dancer{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+
+}*/
+
+button{
+  border:2px solid red;
+  font-size: 20px;
+  border-radius:2px;
+  position:absolute;
 }
+
+@keyframes rot {
+  from {
+    transform: rotate(0deg)
+               translate(-150px)
+               rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg)
+               translate(-150px) 
+               rotate(-360deg);
+  }
+}
+
+.dancer {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  margin: -20px;
+  font-size: 100px;
+  animation: rot 3s infinite linear;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+

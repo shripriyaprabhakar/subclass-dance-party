@@ -18,16 +18,45 @@ $(document).ready(function() {
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
 
     // get the maker function for the kind of dancer we're supposed to make
-    var dancerMakerFunction = window[dancerMakerFunctionName];
+    
 
     // make a dancer with a random position
 
-    var dancer = dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
-      Math.random() * 1000
+    var dancer = new dancerMakerFunction((
+      $("body").height() - 300 ) * Math.random() + 8,
+      ($("body").width() - 150) * Math.random(),
+      Math.random() * 1000,
+      dancers.length
     );
+    dancers.push(dancer);
     $('body').append(dancer.$node);
+
+    //click dancer interaction
+    $(".dancer").on("click", function() {
+      if($(".highlighted".length < 2)) {
+        $(this).addClass("highlighted");
+      }
+      function minimize() {
+        $(".dancer").css({"width": "50px", "opacity": "0.5"});
+        $(".highlighted").css({"width": "190px", "opacity": "1"});
+      }
+      function returnSize() {
+        $(".dancer").css({"width": "140px", "opacity": "1"});
+        $(".highlighted").removeClass("highlighted");
+      }
+      //once two dancers are highlighted animate characters
+      if ($("highlighted").length === 2) {
+        minimize();
+      //animate for three seconds and return to original properties
+      setTimeOut(returnSize, 3000);
+      }
+    });  
+
+  });
+  
+  $('.lineup').on('click', function(event) {
+   
+
   });
 });
 

@@ -1,14 +1,14 @@
-var kathakDancer = function(top, left, timeBetweenSteps) { 
+var saturnDancer = function(top, left, timeBetweenSteps) { 
   this.oldStep = makeDancer.prototype.step;
   makeDancer.call(this, top, left, timeBetweenSteps);
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
   
 };
-kathakDancer.prototype =Object.create(makeDancer.prototype);
-kathakDancer.prototype.constructor = kathakDancer;
+saturnDancer.prototype =Object.create(makeDancer.prototype);
+saturnDancer.prototype.constructor = saturnDancer;
 
-kathakDancer.prototype.step = function() {
+saturnDancer.prototype.step = function() {
   // call the old version of step at the beginning of any call to this new version of step
     
   this.oldStep();
