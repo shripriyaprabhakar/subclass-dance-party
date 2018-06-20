@@ -35,38 +35,38 @@ describe('blinkyDancer', function() {
 });
 
 
-describe('saturnDancer', function() {
+// describe('saturnDancer', function() {
 
-  var saturnDancer, clock;
-  var timeBetweenSteps = 100;
+//   var saturnDancer, clock;
+//   var timeBetweenSteps = 100;
 
-  beforeEach(function() {
-    clock = sinon.useFakeTimers();
-    saturnDancer = new makeBlinkyDancer(10, 20, timeBetweenSteps);
-  });
+//   beforeEach(function() {
+//     clock = sinon.useFakeTimers();
+//     saturnDancer = new makeBlinkyDancer(10, 20, timeBetweenSteps);
+//   });
 
-  it('should have a jQuery $node object', function() {
-    expect(saturnDancer.$node).to.be.an.instanceof(jQuery);
-  });
+//   it('should have a jQuery $node object', function() {
+//     expect(saturnDancer.$node).to.be.an.instanceof(jQuery);
+//   });
 
-  it('should have a step function that makes its node blink', function() {
-    sinon.spy(saturnDancer.$node, 'toggle');
-    saturnDancer.step();
-    expect(saturnDancer.$node.toggle.called).to.be.true;
-  });
+//   it('should have a step function that makes its node blink', function() {
+//     sinon.spy(saturnDancer.$node, 'toggle');
+//     saturnDancer.step();
+//     expect(saturnDancer.$node.toggle.called).to.be.true;
+//   });
 
-  describe('dance', function() {
-    it('should call step at least once per second', function() {
-      sinon.spy(saturnDancer, 'step');
-      expect(saturnDancer.step.callCount).to.be.equal(0);
-      clock.tick(timeBetweenSteps); // ? it seems an extra tick is necessary...
-      clock.tick(timeBetweenSteps);
+//   describe('dance', function() {
+//     it('should call step at least once per second', function() {
+//       sinon.spy(saturnDancer, 'step');
+//       expect(saturnDancer.step.callCount).to.be.equal(0);
+//       clock.tick(timeBetweenSteps); // ? it seems an extra tick is necessary...
+//       clock.tick(timeBetweenSteps);
      
 
-      expect(saturnDancer.step.callCount).to.be.equal(1);
+//       expect(saturnDancer.step.callCount).to.be.equal(1);
 
-      clock.tick(timeBetweenSteps);
-      expect(saturnDancer.step.callCount).to.be.equal(2);
-    });
-  });
-});
+//       clock.tick(timeBetweenSteps);
+//       expect(saturnDancer.step.callCount).to.be.equal(2);
+//     });
+//   });
+// });
