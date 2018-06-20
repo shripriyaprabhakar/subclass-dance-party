@@ -1,10 +1,12 @@
 body, html{
   height:100%;
+  
 }
 body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ-kcBJ2_L8H88lxfVs8FPPJBMq8G9eDCXhityRp66l-UqU5kn");
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -27,11 +29,41 @@ body, a:link, a:visited, a:active{
 }
 
 .Lineup {
-  border:10px solid red;
-  position:absolute;
+  border:2px solid red;
+  position: center;
 }
 
 .mouseover {
  height:32px;
  background-color: #555;
 }
+
+img {
+height : 100px;
+width : 100px;
+
+}
+
+.addDancerButton {
+    background-color: #4CAF50; /* Green */
+    border: 8px solid red;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    flex-direction: centre;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

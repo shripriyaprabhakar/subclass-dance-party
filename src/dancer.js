@@ -12,7 +12,7 @@ makeDancer.prototype.step = function () {
 makeDancer.prototype.setPosition = function() {
   var styleSettings = {
     top: top,
-    left: left
+    //left: left
   };
   this.$node.css(styleSettings);
 }
