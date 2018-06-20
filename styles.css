@@ -14,6 +14,7 @@ body, a:link, a:visited, a:active{
 .title, .addDancerButton{
   padding:5px 12px;
   float:right;
+  position: center;
 }
 .topbar{
   height:32px;
@@ -21,6 +22,7 @@ body, a:link, a:visited, a:active{
 }
 .title{
   background-color: #777;
+  position: center;
 }
 .dancer{
   border:10px solid red;
@@ -29,8 +31,17 @@ body, a:link, a:visited, a:active{
 }
 
 .Lineup {
-  border:2px solid red;
+  background-color: #2456f6; 
+  border:2px solid Green;
   position: center;
+  font-size: 30px;
+}
+
+.interact {
+  background-color: #2456f6; 
+  border:2px solid Green;
+  position: center;
+  font-size: 30px;
 }
 
 .mouseover {
